@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "**")
+@CrossOrigin(origins = "https://frontendborro.web.app")
 public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -53,10 +53,10 @@ public class AuthController {
             return new ResponseEntity(new Mensaje("error de datos en campos o email"),HttpStatus.BAD_REQUEST);
         
         if(usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario()))
-        return new ResponseEntity(new Mensaje("nombre existe"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("nombre existe"),HttpStatus.BAD_REQUEST);
         
         if(usuarioService.existsByEmail(nuevoUsuario.getEmail()))
-        return new ResponseEntity(new Mensaje("correo ya existe"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("correo ya existe"),HttpStatus.BAD_REQUEST);
         
         Usuario usuario = new Usuario(nuevoUsuario.getNombre(),nuevoUsuario.getNombreUsuario(),
         nuevoUsuario.getEmail(),passwordEncoder.encode(nuevoUsuario.getPassword()));
@@ -88,6 +88,6 @@ public class AuthController {
         
         JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(),userDetails.getAuthorities());
         
-        return new ResponseEntity(jwtDto,HttpStatus.OK);
+            return new ResponseEntity(jwtDto,HttpStatus.OK);
     }
 }
