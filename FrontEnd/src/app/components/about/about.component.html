@@ -1,6 +1,10 @@
 <div class="row">
+        <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
+            Editar Perfil
+        </button>
+    
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img id="fotoperfil" src="../../../assets/pp.jpg" class="img-fluid">
+                <img id="fotoperfil" src={{persona.img}} class="img-fluid">
             </div>
             <div id="name_title" class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                 <span>
@@ -11,7 +15,7 @@
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
     <span>
         <h1>Acerca de mi</h1>
-        <p id="textabout">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, sit excepturi! Ipsa iure dicta consequatur debitis sed? Porro, minima? Et sunt cupiditate repellat quasi illo dolores, nobis sit dolore est?</p>
+        <p id="textabout">{{persona.descripcion}}</p>
     </span>
     </div>
 </div>
