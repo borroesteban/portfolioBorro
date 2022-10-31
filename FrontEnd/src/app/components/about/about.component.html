@@ -1,22 +1,26 @@
 <div class="row">
-        <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
-            Editar Perfil
-        </button>
-    
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img id="fotoperfil" src={{persona.img}} class="img-fluid">
-            </div>
-            <div id="name_title" class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <span>
-                    <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-                    <p>Full Stack Developer Jr</p>
-                </span>
-            </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-    <span>
-        <h1>Acerca de mi</h1>
-        <p id="textabout">{{persona.descripcion}}</p>
-    </span>
+    <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged" id="botoneditar">
+        Editar Perfil
+    </button>
+</div>
+<div class="row">
+    <!-- division de la foto -->
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <img id="fotoperfil" src={{persona.img}} class="img-fluid">
+    </div>
+
+    <!-- division del titulo -->
+    <div id="name_title" class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
+        <p>Full Stack Developer Jr</p>
+    </div>
+
+    <!-- division de about -->
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="descripcion">
+        <span>
+            <h1>Acerca de mi</h1>
+                <p id="textabout">{{persona.descripcion}}</p>
+        </span>
     </div>
 </div>
 

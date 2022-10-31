@@ -1,54 +1,85 @@
 .row{
     padding: 20px;
 }
-div{
-    background-color: #a1b5cb;
+/* div{
+       background-color: #a1b5cb;
+     background: rgb(69,185,250);
+    background: linear-gradient(0deg, rgba(69,185,250,1) 0%, rgba(238,238,238,1) 39%, rgba(255,255,255,1) 61%, rgba(79,186,255,1) 100%);
     text-align: center;
 }
+*/ 
 
 
 @media screen and (min-width:576px){
     #fotoperfil{
-        position: absolute;
         width: 120px;
         height: 120px;
-        top: 55vw;
-        left:5%;
         border-radius: 50%;
         box-shadow: 3px 3px 3px black;
+        position: relative;
+        top: -20%;
+
+        
+/*         position: absolute;
+        top: 42vw;
+        left:5%; */
     }
-    #textabout{
-        margin-right:40px;
+    #descripcion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #name_title{
+        
+        font-weight: bold;
+    }
+    #botoneditar{
+        position: relative;
+        margin-top: -2%;
+    }
+}
+
+
+
+
+/*     #textabout{
+        margin-right:40px;
+    } */
+/*     #name_title{
     
         font-weight: bold;
         text-align: left;
         margin-top: 5%;
         margin-left:-13%;
         
-    }
+    } */
 
 
-}
+
 
 @media screen and (max-width: 575px){
     #fotoperfil{
-  
+        position: relative;
+        left: 35%;
         width: 120px;
         height: 120px;
-        top: 55vw;
-        left:35vw;
         border-radius: 50%;
         box-shadow: 3px 3px 3px black;
     }
     #name_title{
-    
+        
         font-weight: bold;
         text-align: center;
         margin-top:5%;
-        
-        
     }
-
+    #descripcion{
+        position: relative;
+        
+        text-align: center;
+    }
+    #botoneditar{
+        position: relative;
+        margin-top: -2%;
+    }
+    
 }

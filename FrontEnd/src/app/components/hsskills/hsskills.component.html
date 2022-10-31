@@ -8,7 +8,7 @@
     <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
        <circle-progress
         [percent]="(skill.porcentaje)"
-        [radius]="100"
+        [radius]="70"
         [imageSrc]="''"
         [showImage]="false"
         [imageHeight]="100"
@@ -17,14 +17,19 @@
         [title]="(skill.nombre)"
         [titleColor]="'#212F3C'"
         [showTitle]="true"
-        [titleFontSize]="'2em'"
+        [titleFontSize]="'1em'"
         [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
+        [space]="-1"
+        [unitsColor]="'#7e00c2'"
+        [outerStrokeGradient]= "true"
+        [outerStrokeGradientStopColor]="'#18b0fb'"
+        [outerStrokeWidth]="5"
+        [innerStrokeWidth]="4"
+        [outerStrokeColor]="'#26488c'"
+        [innerStrokeColor]="'#5ce68a'"
+        
         [animation]="true"
-        [animationDuration]="600"
+        [animationDuration]="1700"
         ></circle-progress>
 
         <div>
